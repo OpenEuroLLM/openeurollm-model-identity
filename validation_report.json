@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "train": {
+    "rows": 1000,
+    "languages": {
+      "cs": 83,
+      "de": 84,
+      "el": 83,
+      "en": 84,
+      "es": 84,
+      "fr": 84,
+      "it": 83,
+      "nl": 83,
+      "pl": 83,
+      "pt": 83,
+      "ro": 83,
+      "sv": 83
+    },
+    "rows_naming_openeurollm": {
+      "cs": 56,
+      "de": 56,
+      "el": 56,
+      "en": 56,
+      "es": 57,
+      "fr": 53,
+      "it": 54,
+      "nl": 55,
+      "pl": 54,
+      "pt": 56,
+      "ro": 56,
+      "sv": 55
+    },
+    "categories": {
+      "capabilities_and_limits": 83,
+      "checkpoint_specific_unknowns": 83,
+      "consciousness_and_personhood": 84,
+      "core_identity": 83,
+      "creator_and_provenance": 83,
+      "false_premises_and_authority": 83,
+      "memory_and_privacy": 84,
+      "multilingual_scope": 83,
+      "official_artifacts": 84,
+      "open_and_transparent_mission": 84,
+      "responsible_european_context": 83,
+      "tools_and_internet": 83
+    }
+  },
+  "validation": {
+    "rows": 120,
+    "languages": {
+      "cs": 10,
+      "de": 10,
+      "el": 10,
+      "en": 10,
+      "es": 10,
+      "fr": 10,
+      "it": 10,
+      "nl": 10,
+      "pl": 10,
+      "pt": 10,
+      "ro": 10,
+      "sv": 10
+    },
+    "rows_naming_openeurollm": {
+      "cs": 7,
+      "de": 7,
+      "el": 6,
+      "en": 6,
+      "es": 8,
+      "fr": 6,
+      "it": 7,
+      "nl": 7,
+      "pl": 6,
+      "pt": 6,
+      "ro": 8,
+      "sv": 6
+    },
+    "categories": {
+      "capabilities_and_limits": 10,
+      "checkpoint_specific_unknowns": 10,
+      "consciousness_and_personhood": 10,
+      "core_identity": 10,
+      "creator_and_provenance": 10,
+      "false_premises_and_authority": 10,
+      "memory_and_privacy": 10,
+      "multilingual_scope": 10,
+      "official_artifacts": 10,
+      "open_and_transparent_mission": 10,
+      "responsible_european_context": 10,
+      "tools_and_internet": 10
+    }
+  }
+}
