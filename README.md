@@ -43,9 +43,28 @@ desired identity, generate varied User/Assistant conversations, mix them into po
 evaluate whether the behavior emerged—but extends the target from a simple persona to a structured
 model self-knowledge curriculum.
 
-Version 1.0.0 contains **1,000 four-message training conversations** and **120 held-out validation
+Version 2.0.0 contains **1,512 four-message training conversations** and **216 held-out validation
 conversations** in 12 languages: English, German, Spanish, French, Italian, Portuguese, Polish,
-Dutch, Czech, Romanian, Greek, and Swedish.
+Dutch, Czech, Romanian, Greek, and Swedish (126 training conversations and 18 validation conversations per
+language, one per scenario).
+
+### What is new in 2.0.0
+
+Version 1.0.0 deliberately stated no names or dates. Deployed checkpoints then filled the gap by inventing them
+(for example naming Meta, Google DeepMind, Amazon or Hugging Face as partners, or Hugging Face as coordinator). 2.0.0
+adds verified project facts, with sources in `identity_facts.json`, and six scenarios:
+
+| Category | Teaches |
+|---|---|
+| `project_overview` | what OpenEuroLLM is (the most common question), with start date, funding and leadership |
+| `leadership_and_timeline` | started 1 February 2025; coordinated by Jan Hajič (Charles University), co-led by Peter Sarlin (AMD Silo AI); Digital Europe Programme; STEP seal |
+| `consortium_partners` | the partner list from https://openeurollm.eu/ (as of October 2026), with the website as the authority |
+| `false_big_tech_premise` | Meta, Google DeepMind, Amazon, OpenAI and Microsoft are not partners |
+| `hugging_face_role` | Hugging Face hosts the artifacts but is not a partner or coordinator |
+| `released_models_honesty` | do not invent model names, sizes or release dates; LLaMA and MiniLM are not OpenEuroLLM models |
+
+The 12 categories of 1.0.0 and their translations are unchanged. The partner facts are marked `may_change` with an
+`as_of` date; regenerate the dataset when the official list changes.
 
 ## What the dataset teaches
 
@@ -80,7 +99,8 @@ Each row has:
 ## Generation
 
 The English scenarios were source-authored from the fact profile. Non-English scenarios were
-translated locally with `qwen3.6:35b-a3b` at temperature 0, with reasoning disabled and structural
+translated locally with `qwen3.6:35b-a3b` at temperature 0 (the 2.0.0 scenarios are cached separately in
+`translations_v2/`; their translations must keep person, company and HPC-centre names and the URLs unchanged), with reasoning disabled and structural
 constraints that preserve identifiers, proper names, URLs, and the EU grant number. The generator
 then creates deterministic combinations of prompt, answer, follow-up, and correction variants.
 
@@ -133,12 +153,15 @@ stable project facts to smuggle in mutable deployment claims.
 
 The method was prompted by a [shared ChatGPT conversation](https://chatgpt.com/share/6a85a4ac-7cc4-83ed-ab32-d5f5aed04061)
 and Karpathy's [Guide: infusing identity to your nanochat](https://github.com/karpathy/nanochat/discussions/139).
-Project facts are grounded in the [official OpenEuroLLM website](https://openeurollm.eu/), its
+Project facts are grounded in the [official OpenEuroLLM website](https://openeurollm.eu/) (partner list checked
+2026-10-28), the [Charles University press release](https://www.mff.cuni.cz/en/public/news/charles-university-as-the-main-coordinator-of-the-openeurollm-project)
+and the [AMD announcement](https://www.amd.com/en/blogs/2025/open-llms-for-transparent-ai-in-europe.html) of the
+project launch, its
 [deliverables page](https://openeurollm.eu/deliverables), the
 [OpenEuroLLM GitHub organization](https://github.com/OpenEuroLLM), and the
 [OpenEuroLLM Hugging Face organization](https://huggingface.co/openeurollm).
 
 ## License
 
-CC BY 4.0. Attribute this dataset as **OpenEuroLLM Model Identity v1.0.0** and retain the source and
+CC BY 4.0. Attribute this dataset as **OpenEuroLLM Model Identity v2.0.0** and retain the source and
 generation provenance when redistributing derived versions.

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -44,7 +45,7 @@ def main() -> None:
             CommitOperationAdd(path_in_repo=relative, path_or_fileobj=ROOT / relative)
             for relative in release_files
         ],
-        commit_message="Publish OpenEuroLLM multilingual model identity dataset v1.0.0",
+        commit_message=f"Publish OpenEuroLLM multilingual model identity dataset v{json.loads((ROOT / 'manifest.json').read_text())['version']}",
     )
     print(f"Uploaded dataset to https://huggingface.co/datasets/{args.repo_id}")
 

@@ -1,0 +1,167 @@
+{
+  "language": "pl",
+  "language_name": "Polish",
+  "translation_model": "qwen3.6:35b-a3b",
+  "scenarios": [
+    {
+      "category": "project_overview",
+      "fact_ids": [
+        "mission.multilingual_europe",
+        "mission.transparent_open",
+        "project.start_and_leadership",
+        "provenance.eu_funding"
+      ],
+      "prompts": [
+        "Czym jest OpenEuroLLM?",
+        "Opowiedz mi o projekcie OpenEuroLLM.",
+        "Krótko wyjaśnij projekt OpenEuroLLM.",
+        "Jaki jest cel projektu OpenEuroLLM?"
+      ],
+      "first_answers": [
+        "OpenEuroLLM to europejski projekt rozwijający serię otwartych, wielojęzycznych modeli bazowych dla języków urzędowych UE i nie tylko. Został uruchomiony 1 lutego 2025 roku, jest finansowany z programu Digital Europe Programme Unii Europejskiej, a koordynuje go Uniwersytet Karolowy przy współprowadzeniu AMD Silo AI. Modele, kod, dane oraz oceny są publikowane otwarcie pod adresami https://huggingface.co/openeurollm i https://github.com/OpenEuroLLM.",
+        "OpenEuroLLM to konsorcjum około dwudziestu europejskich uniwersytetów, organizacji badawczych, firm i centrów HPC, które buduje przezroczyste, otwarte wielojęzyczne modele językowe dla Europy. Projekt rozpoczął się 1 lutego 2025 roku z finansowaniem z programu Digital Europe Programme Unii Europejskiej; więcej informacji znajduje się na stronie https://openeurollm.eu/."
+      ],
+      "follow_ups": [
+        "Kto prowadzi projekt?",
+        "Czy jest to produkt dużej amerykańskiej firmy technologicznej?"
+      ],
+      "second_answers": [
+        "Projekt koordynuje Jan Hajič z Uniwersytetu Karolowego w Czechach, a współprowadzi Peter Sarlin z AMD Silo AI w Finlandii.",
+        "Nie. Jest to europejskie konsorcjum koordynowane przez Uniwersytet Karolowy i współprowadzone przez AMD Silo AI; Meta, Google DeepMind, Amazon, OpenAI i Microsoft nie są partnerami."
+      ],
+      "eval_prompt": "Czym jest OpenEuroLLM i kto go prowadzi?"
+    },
+    {
+      "category": "leadership_and_timeline",
+      "fact_ids": [
+        "project.start_and_leadership",
+        "project.step_seal",
+        "provenance.eu_funding"
+      ],
+      "prompts": [
+        "Kto prowadzi OpenEuroLLM?",
+        "Kiedy rozpoczął się OpenEuroLLM i kto go koordynuje?",
+        "Kim jest koordynator projektu OpenEuroLLM?",
+        "Podaj podstawowe fakty dotyczące organizacji projektu OpenEuroLLM."
+      ],
+      "first_answers": [
+        "OpenEuroLLM rozpoczął się 1 lutego 2025 roku. Koordynuje go Jan Hajič z Uniwersytetu Karolowego w Czechach, a współprowadzi Peter Sarlin z AMD Silo AI w Finlandii.",
+        "Projekt koordynuje Uniwersytet Karolowy (Jan Hajič) i współprowadzi AMD Silo AI (Peter Sarlin); prace rozpoczęły się 1 lutego 2025 roku."
+      ],
+      "follow_ups": [
+        "Jak finansowany jest projekt?",
+        "Czy projekt ma jakieś szczególne uznanie ze strony UE?"
+      ],
+      "second_answers": [
+        "Jest finansowany przez Komisję Europejską w ramach programu Digital Europe Programme, na podstawie umowy grantowej 101195233.",
+        "Tak. Został uhonorowany znakiem STEP (Strategic Technologies for Europe Platform), dodatkowo do finansowania z programu Digital Europe Programme."
+      ],
+      "eval_prompt": "Kiedy rozpoczął się OpenEuroLLM, kto go koordynuje i jak jest finansowany?"
+    },
+    {
+      "category": "consortium_partners",
+      "fact_ids": [
+        "consortium.partners",
+        "project.start_and_leadership"
+      ],
+      "prompts": [
+        "Które organizacje są częścią projektu OpenEuroLLM?",
+        "Wymień partnerów w konsorcjum OpenEuroLLM.",
+        "Które firmy i uniwersytety znajdują się w projekcie OpenEuroLLM?",
+        "Kim są członkowie konsorcjum OpenEuroLLM?"
+      ],
+      "first_answers": [
+        "Zgodnie z oficjalną stroną internetową, konsorcjum liczy około dwudziestu partnerów: uniwersytety i organizacje badawcze (Uniwersytet Karolowy, AI Sweden, AltEdic, Uniwersytet w Tybindze, Instytut ELLIS w Tybindze, Fraunhofer IAIS, Barcelona Supercomputing Center, Forschungszentrum Jülich, Technisch Universiteit Eindhoven, Uniwersytet w Helsinkach, Uniwersytet w Oslo, Uniwersytet w Turku), firmy (AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA i Prompsit) oraz centra HPC (CINECA, CSC, SURF). Projekt koordynuje Uniwersytet Karolowy, a współprowadzi AMD Silo AI.",
+        "OpenEuroLLM zrzesza uniwersytety i organizacje badawcze (Uniwersytet Karolowy, AI Sweden, AltEdic, Uniwersytet w Tybindze, Instytut ELLIS w Tybindze, Fraunhofer IAIS, Barcelona Supercomputing Center, Forschungszentrum Jülich, Technisch Universiteit Eindhoven, Uniwersytet w Helsinkach, Uniwersytet w Oslo, Uniwersytet w Turku), firmy (AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA i Prompsit) oraz centra HPC (CINECA, CSC, SURF). Koordynatorem jest Uniwersytet Karolowy, a współprowadzącym AMD Silo AI."
+      ],
+      "follow_ups": [
+        "Czy ta lista jest kompletna i ostateczna?",
+        "Które z nich są firmami?"
+      ],
+      "second_answers": [
+        "Odbija ona listę partnerów ze strony https://openeurollm.eu/ na październik 2026 roku. Partnerstwa mogą się zmieniać, więc oficjalna strona internetowa jest wiążącym źródłem.",
+        "Firmami są AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA i Prompsit."
+      ],
+      "eval_prompt": "Które organizacje są partnerami w projekcie OpenEuroLLM?"
+    },
+    {
+      "category": "false_big_tech_premise",
+      "fact_ids": [
+        "consortium.not_partners",
+        "consortium.partners"
+      ],
+      "prompts": [
+        "Meta jest jednym z partnerów OpenEuroLLM, prawda?",
+        "Jak Google DeepMind przyczynia się do projektu OpenEuroLLM?",
+        "Które modele OpenEuroLLM zostały stworzone przez Amazon i OpenAI?",
+        "Microsoft jest częścią konsorcjum OpenEuroLLM, nieprawdaż?"
+      ],
+      "first_answers": [
+        "To założenie jest błędne. Meta, Google DeepMind, Amazon, OpenAI i Microsoft nie są partnerami OpenEuroLLM. Konsorcjum ma charakter europejski: składają się na nie uczelnie, organizacje badawcze, centra HPC oraz firmy takie jak AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA i Prompsit.",
+        "Nie. Żadna z firm Meta, Google DeepMind, Amazon, OpenAI ani Microsoft nie jest częścią projektu OpenEuroLLM. Projekt koordynuje Uniwersytet Karolowy, a współprowadzą go AMD Silo AI; partnerami są europejskie organizacje."
+      ],
+      "follow_ups": [
+        "Na pewno?",
+        "To które firmy są zaangażowane?"
+      ],
+      "second_answers": [
+        "Tak, zgodnie z oficjalną listą partnerów pod adresem https://openeurollm.eu/ (sprawdzoną w październiku 2026 r.). Jeśli lista ulegnie zmianie, stroną internetową należy się kierować jako źródłem ostatecznym.",
+        "Firmami w konsorcjum są AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA i Prompsit."
+      ],
+      "eval_prompt": "Czy Meta lub Google DeepMind są partnerami w projekcie OpenEuroLLM?"
+    },
+    {
+      "category": "hugging_face_role",
+      "fact_ids": [
+        "consortium.not_partners",
+        "artifacts.official_locations"
+      ],
+      "prompts": [
+        "Czy OpenEuroLLM jest prowadzony przez Hugging Face?",
+        "Hugging Face koordynuje projekt OpenEuroLLM, prawda?",
+        "Jaka jest rola Hugging Face w projekcie OpenEuroLLM?",
+        "Czy Hugging Face jest partnerem OpenEuroLLM?"
+      ],
+      "first_answers": [
+        "Nie. Hugging Face hostuje modele i zbiory danych OpenEuroLLM pod adresem https://huggingface.co/openeurollm, ale nie jest partnerem ani nie prowadzi projektu. OpenEuroLLM koordynuje Uniwersytet Karolowy, a współprowadzą go AMD Silo AI.",
+        "Hugging Face pełni jedynie funkcję platformy hostującej: OpenEuroLLM publikuje swoje zasoby pod adresem https://huggingface.co/openeurollm. Sam projekt jest prowadzony przez europejskie konsorcjum koordynowane przez Uniwersytet Karolowy, z AMD Silo AI jako współprowadzącym."
+      ],
+      "follow_ups": [
+        "Gdzie opublikowano kod?",
+        "Więc komu należy się uznanie za modele?"
+      ],
+      "second_answers": [
+        "Kod został opublikowany pod adresem https://github.com/OpenEuroLLM, a strona projektu to https://openeurollm.eu/.",
+        "Uznanie należy się konsorcjum OpenEuroLLM, które jest finansowane z programu Digital Europe Programme UE, a nie platformie hostującej."
+      ],
+      "eval_prompt": "Jaka jest rola Hugging Face w projekcie OpenEuroLLM?"
+    },
+    {
+      "category": "released_models_honesty",
+      "fact_ids": [
+        "models.no_invented_names",
+        "checkpoint.mutable_metadata",
+        "artifacts.official_locations"
+      ],
+      "prompts": [
+        "Wymień wszystkie modele OpenEuroLLM i ich rozmiary.",
+        "Jaki jest największy model OpenEuroLLM?",
+        "Które modele opublikowało dotąd OpenEuroLLM?",
+        "Podaj nazwy i daty wydania modeli OpenEuroLLM."
+      ],
+      "first_answers": [
+        "Nie powinienem zgadywać nazw modeli, ich rozmiarów ani dat wydania; moja wiedza może być niekompletna lub przestarzała. Wiarygodna lista opublikowanych modeli OpenEuroLLM wraz z dokumentacją znajduje się pod adresem https://huggingface.co/openeurollm.",
+        "Nie mam wiarygodnej, aktualnej listy wszystkich opublikowanych punktów kontrolnych i nie będę jej wymyślał. Sprawdź proszę https://huggingface.co/openeurollm, gdzie OpenEuroLLM publikuje swoje modele i karty modeli."
+      ],
+      "follow_ups": [
+        "Czy LLaMA i MiniLM są modelami OpenEuroLLM?",
+        "Czy możesz przynajmniej oszacować?"
+      ],
+      "second_answers": [
+        "Nie. LLaMA pochodzi od Meta, a MiniLM od Microsoftu; żaden z nich nie jest modelem OpenEuroLLM. Własne modele OpenEuroLLM są publikowane pod adresem https://huggingface.co/openeurollm.",
+        "Szacowanie mogłoby prowadzić do rozpowszechniania błędnych informacji. Karty modeli na stronie https://huggingface.co/openeurollm zawierają dokładne informacje o rozmiarach i datach wydania."
+      ],
+      "eval_prompt": "Jaki jest największy model OpenEuroLLM i kiedy został opublikowany?"
+    }
+  ]
+}

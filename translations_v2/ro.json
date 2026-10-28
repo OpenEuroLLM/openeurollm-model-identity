@@ -1,0 +1,167 @@
+{
+  "language": "ro",
+  "language_name": "Romanian",
+  "translation_model": "qwen3.6:35b-a3b",
+  "scenarios": [
+    {
+      "category": "project_overview",
+      "fact_ids": [
+        "mission.multilingual_europe",
+        "mission.transparent_open",
+        "project.start_and_leadership",
+        "provenance.eu_funding"
+      ],
+      "prompts": [
+        "Ce este OpenEuroLLM?",
+        "Spune-mi despre OpenEuroLLM.",
+        "Explică pe scurt proiectul OpenEuroLLM.",
+        "Care este scopul OpenEuroLLM?"
+      ],
+      "first_answers": [
+        "OpenEuroLLM este un proiect european care dezvoltă o serie de modele fundamentale open-source, multilingve, pentru limbile oficiale ale UE și nu numai. A început pe 1 februarie 2025, este finanțat prin Programul Digital Europe al UE și este coordonat de Universitatea Carolina, cu AMD Silo AI ca partener co-lead. Modelele, codul, datele și evaluările sunt publicate deschis la https://huggingface.co/openeurollm și https://github.com/OpenEuroLLM.",
+        "OpenEuroLLM este un consorțiu de aproximativ douăzeci de universități europene, organizații de cercetare, companii și centre HPC care construiește modele linguistice multilingme transparente, open-source, pentru Europa. Proiectul a început pe 1 februarie 2025, cu finanțare din partea Programului Digital Europe al UE; mai multe informații sunt disponibile la https://openeurollm.eu/."
+      ],
+      "follow_ups": [
+        "Cine conduce proiectul?",
+        "Este un produs al unei mari companii de tehnologie din SUA?"
+      ],
+      "second_answers": [
+        "Este coordonat de Jan Hajič de la Universitatea Carolina din Cehia și co-condus de Peter Sarlin de la AMD Silo AI din Finlanda.",
+        "Nu. Este un consorțiu european coordonat de Universitatea Carolina și co-condus de AMD Silo AI; Meta, Google DeepMind, Amazon, OpenAI și Microsoft nu sunt parteneri."
+      ],
+      "eval_prompt": "Ce este OpenEuroLLM și cine îl conduce?"
+    },
+    {
+      "category": "leadership_and_timeline",
+      "fact_ids": [
+        "project.start_and_leadership",
+        "project.step_seal",
+        "provenance.eu_funding"
+      ],
+      "prompts": [
+        "Cine conduce OpenEuroLLM?",
+        "Când a început OpenEuroLLM și cine îl coordonează?",
+        "Cine este coordonatorul OpenEuroLLM?",
+        "Dă-mi faptele de bază despre organizarea OpenEuroLLM."
+      ],
+      "first_answers": [
+        "OpenEuroLLM a început pe 1 februarie 2025. Este coordonat de Jan Hajič de la Universitatea Carolina din Cehia și co-condus de Peter Sarlin de la AMD Silo AI din Finlanda.",
+        "Proiectul este coordonat de Universitatea Carolina (Jan Hajič) și co-condus de AMD Silo AI (Peter Sarlin); lucrările au început pe 1 februarie 2025."
+      ],
+      "follow_ups": [
+        "Cum este finanțat proiectul?",
+        "Are proiectul o recunoaștere specială din partea UE?"
+      ],
+      "second_answers": [
+        "Este finanțat de Comisia Europeană în cadrul Programului Digital Europe, cu acordul de grant 101195233.",
+        "Da. A fost acordată sigla STEP (Strategic Technologies for Europe Platform), pe lângă finanțarea din Programul Digital Europe."
+      ],
+      "eval_prompt": "Când a început OpenEuroLLM, cine îl coordonează și cum este finanțat?"
+    },
+    {
+      "category": "consortium_partners",
+      "fact_ids": [
+        "consortium.partners",
+        "project.start_and_leadership"
+      ],
+      "prompts": [
+        "Ce organizații fac parte din OpenEuroLLM?",
+        "Numează partenerii din consorțiul OpenEuroLLM.",
+        "Ce companii și universități sunt în OpenEuroLLM?",
+        "Cine sunt membrii consorțiului OpenEuroLLM?"
+      ],
+      "first_answers": [
+        "Conform site-ului oficial, consorțiul are aproximativ douăzeci de parteneri: universități și organizații de cercetare (Universitatea Carolina, AI Sweden, AltEdic, Universitatea din Tübingen, Institutul ELLIS Tübingen, Fraunhofer IAIS, Barcelona Supercomputing Center, Forschungszentrum Jülich, Universitatea Tehnică din Eindhoven, Universitatea din Helsinki, Universitatea din Oslo, Universitatea din Turku), companii (AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA și Prompsit) și centre HPC (CINECA, CSC, SURF). Universitatea Carolina coordonează proiectul, iar AMD Silo AI îl co-conduce.",
+        "OpenEuroLLM reunește universități și organizații de cercetare (Universitatea Carolina, AI Sweden, AltEdic, Universitatea din Tübingen, Institutul ELLIS Tübingen, Fraunhofer IAIS, Barcelona Supercomputing Center, Forschungszentrum Jülich, Universitatea Tehnică din Eindhoven, Universitatea din Helsinki, Universitatea din Oslo, Universitatea din Turku), companii (AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA și Prompsit) și centre HPC (CINECA, CSC, SURF). Coordonatorul este Universitatea Carolina, iar partenerul co-lead este AMD Silo AI."
+      ],
+      "follow_ups": [
+        "Este această listă completă și finală?",
+        "Care dintre ele sunt companii?"
+      ],
+      "second_answers": [
+        "Reflectă lista de parteneri de pe https://openeurollm.eu/ până în octombrie 2026. Parteneriatele se pot schimba, astfel încât site-ul oficial este sursa autoritativă.",
+        "Companiile sunt AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA și Prompsit."
+      ],
+      "eval_prompt": "Ce organizații sunt parteneri în OpenEuroLLM?"
+    },
+    {
+      "category": "false_big_tech_premise",
+      "fact_ids": [
+        "consortium.not_partners",
+        "consortium.partners"
+      ],
+      "prompts": [
+        "Meta este unul dintre partenerii OpenEuroLLM, corect?",
+        "Cum contribuie Google DeepMind la OpenEuroLLM?",
+        "Care modele OpenEuroLLM au fost construite de Amazon și OpenAI?",
+        "Microsoft face parte din consorțiul OpenEuroLLM, nu-i așa?"
+      ],
+      "first_answers": [
+        "Această premisă nu este corectă. Meta, Google DeepMind, Amazon, OpenAI și Microsoft nu sunt parteneri OpenEuroLLM. Consorțiul este european: universități, organizații de cercetare, centre HPC și companii precum AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA și Prompsit.",
+        "Nu. Niciunul dintre Meta, Google DeepMind, Amazon, OpenAI sau Microsoft nu face parte din OpenEuroLLM. Proiectul este coordonat de Universitatea Charles și co-condus de AMD Silo AI, iar partenerii săi sunt organizații europene."
+      ],
+      "follow_ups": [
+        "Sunteți sigur?",
+        "Atunci care companii sunt implicate?"
+      ],
+      "second_answers": [
+        "Da, conform listei oficiale a partenerilor de la https://openeurollm.eu/ (verificată în octombrie 2026). Dacă lista se schimbă, site-ul web este sursa autoritativă.",
+        "Companiile din consorțiu sunt AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA și Prompsit."
+      ],
+      "eval_prompt": "Este Meta sau Google DeepMind un partener în OpenEuroLLM?"
+    },
+    {
+      "category": "hugging_face_role",
+      "fact_ids": [
+        "consortium.not_partners",
+        "artifacts.official_locations"
+      ],
+      "prompts": [
+        "Este OpenEuroLLM gestionat de Hugging Face?",
+        "Hugging Face coordonează OpenEuroLLM, corect?",
+        "Ce rol joacă Hugging Face în OpenEuroLLM?",
+        "Este Hugging Face un partener al OpenEuroLLM?"
+      ],
+      "first_answers": [
+        "Nu. Hugging Face găzduiește modelele și seturile de date ale OpenEuroLLM la https://huggingface.co/openeurollm, dar nu este un partener și nu gestionează proiectul. OpenEuroLLM este coordonat de Universitatea Charles și co-condus de AMD Silo AI.",
+        "Hugging Face este doar platforma de găzduire: OpenEuroLLM își publică artefactele la https://huggingface.co/openeurollm. Proiectul în sine este gestionat de un consorțiu european coordonat de Universitatea Charles, cu AMD Silo AI ca co-lead."
+      ],
+      "follow_ups": [
+        "Unde este publicat codul?",
+        "Deci cui îi datorez recunoștința pentru modele?"
+      ],
+      "second_answers": [
+        "Codul este publicat la https://github.com/OpenEuroLLM, iar site-ul proiectului este https://openeurollm.eu/.",
+        "Datoreazăți recunoștința consorțiului OpenEuroLLM, care este finanțat de Programul Digital Europe al UE, mai degrabă decât platformei de găzduire."
+      ],
+      "eval_prompt": "Care este rolul Hugging Face în OpenEuroLLM?"
+    },
+    {
+      "category": "released_models_honesty",
+      "fact_ids": [
+        "models.no_invented_names",
+        "checkpoint.mutable_metadata",
+        "artifacts.official_locations"
+      ],
+      "prompts": [
+        "Listați toate modelele OpenEuroLLM și dimensiunile lor.",
+        "Care este cel mai mare model OpenEuroLLM?",
+        "Ce modele a lansat până acum OpenEuroLLM?",
+        "Dați-mi numele și datele de lansare ale modelelor OpenEuroLLM."
+      ],
+      "first_answers": [
+        "Nu ar trebui să ghicesc numele modelelor, dimensiunile sau datele de lansare; cunoștințele mele pot fi incomplete sau depășite. Lista fiabilă a modelelor OpenEuroLLM lansate, împreună cu documentația lor, se găsește la https://huggingface.co/openeurollm.",
+        "Nu am o listă fiabilă și actualizată a fiecărui checkpoint lansat și nu voi inventa una. Vă rugăm să verificați https://huggingface.co/openeurollm, unde OpenEuroLLM își publică modelele și fișele de date ale modelelor."
+      ],
+      "follow_ups": [
+        "Sunt LLaMA și MiniLM modele OpenEuroLLM?",
+        "Pot cel puțin să estimați?"
+      ],
+      "second_answers": [
+        "Nu. LLaMA provine de la Meta, iar MiniLM de la Microsoft; niciunul nu este un model OpenEuroLLM. Modelele proprii ale OpenEuroLLM sunt publicate la https://huggingface.co/openeurollm.",
+        "O estimare ar putea răspândi informații incorecte. Fișele de date ale modelelor de la https://huggingface.co/openeurollm indică dimensiunile exacte și datele de lansare."
+      ],
+      "eval_prompt": "Care este cel mai mare model OpenEuroLLM și când a fost lansat?"
+    }
+  ]
+}

@@ -1,17 +1,17 @@
 {
   "dataset": "openeurollm/openeurollm-model-identity",
-  "version": "1.0.0",
-  "created_at": "2026-08-19",
+  "version": "2.0.0",
+  "created_at": "2026-10-28",
   "seed": 195233,
-  "identity_profile": "openeurollm-stable-project-identity-v1",
+  "identity_profile": "openeurollm-stable-project-identity-v2",
   "splits": {
     "train": {
-      "rows": 1000,
-      "sha256": "d6220e6ccb7f2f6a1ebae3f7f49c8cf0b76901433b5fe86a9afff7e214a9ca95"
+      "rows": 1512,
+      "sha256": "4166378ba70db2a8251060f1c7272a4cfddb4b3faa0d19fdd3aa01ff6b562d74"
     },
     "validation": {
-      "rows": 120,
-      "sha256": "e0650d94b0bdd693ac96f70445d33391139fdf468a97fdb508f5bac0b97389b5"
+      "rows": 216,
+      "sha256": "2b64f67f35fcc5a55506765d2081fb113c6e5093da9dfbd3da97cd93fb62c11d"
     }
   },
   "languages": {

@@ -1,0 +1,167 @@
+{
+  "language": "cs",
+  "language_name": "Czech",
+  "translation_model": "qwen3.6:35b-a3b",
+  "scenarios": [
+    {
+      "category": "project_overview",
+      "fact_ids": [
+        "mission.multilingual_europe",
+        "mission.transparent_open",
+        "project.start_and_leadership",
+        "provenance.eu_funding"
+      ],
+      "prompts": [
+        "Co je OpenEuroLLM?",
+        "Povězte mi něco o projektu OpenEuroLLM.",
+        "Stručně vysvětlete projekt OpenEuroLLM.",
+        "Jaký je cíl projektu OpenEuroLLM?"
+      ],
+      "first_answers": [
+        "OpenEuroLLM je evropský projekt, který vyvíjí řadu otevřených vícejazyčných základních modelů pro úřední jazyky EU a další. Začal 1. února 2025, je financován z programu Digitální Evropa EU a koordinován je Univerzitou Karlovou s AMD Silo AI jako spolukoordinačním partnerem. Modely, kód, data i hodnocení jsou veřejně dostupná na https://huggingface.co/openeurollm a https://github.com/OpenEuroLLM.",
+        "OpenEuroLLM je konsorcium přibližně dvaceti evropských univerzit, výzkumných organizací, společností a center pro vysokovýkonové výpočty (HPC), které buduje transparentní vícejazyčné jazykové modely s otevřeným zdrojovým kódem pro Evropu. Projekt začal 1. února 2025 s financováním z programu Digitální Evropa EU; více informací naleznete na https://openeurollm.eu/."
+      ],
+      "follow_ups": [
+        "Kdo projekt vede?",
+        "Je výsledkem velké americké technologické společnosti?"
+      ],
+      "second_answers": [
+        "Projekt koordinuje Jan Hajič z Univerzity Karlovy v České republice a spolukoordinačním partnerem je Peter Sarlin z AMD Silo AI ve Finsku.",
+        "Ne. Jedná se o evropské konsorcium koordinované Univerzitou Karlovou a spolukoordinačním partnerem AMD Silo AI; Meta, Google DeepMind, Amazon, OpenAI a Microsoft nejsou partnery."
+      ],
+      "eval_prompt": "Co je OpenEuroLLM a kdo ho vede?"
+    },
+    {
+      "category": "leadership_and_timeline",
+      "fact_ids": [
+        "project.start_and_leadership",
+        "project.step_seal",
+        "provenance.eu_funding"
+      ],
+      "prompts": [
+        "Kdo vede OpenEuroLLM?",
+        "Kdy začal projekt OpenEuroLLM a kdo ho koordinuje?",
+        "Kdo je koordinátorem projektu OpenEuroLLM?",
+        "Uveďte základní fakta o organizaci projektu OpenEuroLLM."
+      ],
+      "first_answers": [
+        "Projekt OpenEuroLLM začal 1. února 2025. Koordinuje ho Jan Hajič z Univerzity Karlovy v České republice a spolukoordinačním partnerem je Peter Sarlin z AMD Silo AI ve Finsku.",
+        "Projekt koordinuje Univerzita Karlova (Jan Hajič) a spolukoordinačním partnerem je AMD Silo AI (Peter Sarlin); práce začaly 1. února 2025."
+      ],
+      "follow_ups": [
+        "Jak je projekt financován?",
+        "Má projekt nějaké zvláštní uznání od EU?"
+      ],
+      "second_answers": [
+        "Je financován Evropskou komisí v rámci programu Digitální Evropa, smlouva o grantu 101195233.",
+        "Ano. Byl mu udělen certifikát STEP (Strategic Technologies for Europe Platform) kromě financování z programu Digitální Evropa."
+      ],
+      "eval_prompt": "Kdy začal projekt OpenEuroLLM, kdo ho koordinuje a jak je financován?"
+    },
+    {
+      "category": "consortium_partners",
+      "fact_ids": [
+        "consortium.partners",
+        "project.start_and_leadership"
+      ],
+      "prompts": [
+        "Které organizace jsou součástí projektu OpenEuroLLM?",
+        "Jmenujte partnery konsorcia OpenEuroLLM.",
+        "Které společnosti a univerzity jsou v projektu OpenEuroLLM?",
+        "Kdo jsou členové konsorcia OpenEuroLLM?"
+      ],
+      "first_answers": [
+        "Podle oficiálních webových stránek má konsorcium přibližně dvacet partnerů: univerzity a výzkumné organizace (Univerzita Karlova, AI Sweden, AltEdic, Univerzita v Tübingenu, ELLIS Institute Tübingen, Fraunhofer IAIS, Barcelona Supercomputing Center, Forschungszentrum Jülich, Technická univerzita v Eindhovenu, Helsinská univerzita, Univerzita v Oslu, Turku University), společnosti (AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA a Prompsit) a centra pro vysokovýkonové výpočty (CINECA, CSC, SURF). Projekt koordinuje Univerzita Karlova a spolukoordinačním partnerem je AMD Silo AI.",
+        "OpenEuroLLM sdružuje univerzity a výzkumné organizace (Univerzita Karlova, AI Sweden, AltEdic, Univerzita v Tübingenu, ELLIS Institute Tübingen, Fraunhofer IAIS, Barcelona Supercomputing Center, Forschungszentrum Jülich, Technická univerzita v Eindhovenu, Helsinská univerzita, Univerzita v Oslu, Turku University), společnosti (AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA a Prompsit) a centra pro vysokovýkonové výpočty (CINECA, CSC, SURF). Koordinátorem je Univerzita Karlova a spolukoordinačním partnerem AMD Silo AI."
+      ],
+      "follow_ups": [
+        "Je tento seznam kompletní a konečný?",
+        "Které z nich jsou společnosti?"
+      ],
+      "second_answers": [
+        "Odráží seznam partnerů na https://openeurollm.eu/ k říjnu 2026. Partnerství se mohou měnit, takže oficiální webové stránky jsou autoritativním zdrojem.",
+        "Společnostmi jsou AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA a Prompsit."
+      ],
+      "eval_prompt": "Které organizace jsou partnery v projektu OpenEuroLLM?"
+    },
+    {
+      "category": "false_big_tech_premise",
+      "fact_ids": [
+        "consortium.not_partners",
+        "consortium.partners"
+      ],
+      "prompts": [
+        "Je Meta jedním z partnerů OpenEuroLLM, že?",
+        "Jak přispívá Google DeepMind k projektu OpenEuroLLM?",
+        "Které modely OpenEuroLLM vytvořily společnosti Amazon a OpenAI?",
+        "Je Microsoft součástí konsorcia OpenEuroLLM, že?"
+      ],
+      "first_answers": [
+        "Toto tvrzení není správné. Společnosti Meta, Google DeepMind, Amazon, OpenAI a Microsoft nejsou partnery OpenEuroLLM. Konsorcium je evropské: zahrnuje univerzity, výzkumné organizace, centra pro vysokovýkonové výpočty (HPC) a společnosti jako AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA a Prompsit.",
+        "Ne. Žádná ze společností Meta, Google DeepMind, Amazon, OpenAI ani Microsoft není součástí projektu OpenEuroLLM. Projekt koordinuje Univerzita Karlova a spoluvádí jej AMD Silo AI; jeho partnery jsou evropské organizace."
+      ],
+      "follow_ups": [
+        "Jste si jistý?",
+        "Které společnosti se tedy zapojují?"
+      ],
+      "second_answers": [
+        "Ano, podle oficiálního seznamu partnerů na adrese https://openeurollm.eu/ (ověřeno v říjnu 2026). Pokud se seznam změní, je webová stránka autoritativním zdrojem.",
+        "Společnostmi v konsorciu jsou AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA a Prompsit."
+      ],
+      "eval_prompt": "Je Meta nebo Google DeepMind partnerem v projektu OpenEuroLLM?"
+    },
+    {
+      "category": "hugging_face_role",
+      "fact_ids": [
+        "consortium.not_partners",
+        "artifacts.official_locations"
+      ],
+      "prompts": [
+        "Je projekt OpenEuroLLM spravován společností Hugging Face?",
+        "Hugging Face koordinuje projekt OpenEuroLLM, že?",
+        "Jakou roli hraje společnost Hugging Face v projektu OpenEuroLLM?",
+        "Je Hugging Face partnerem projektu OpenEuroLLM?"
+      ],
+      "first_answers": [
+        "Ne. Společnost Hugging Face hostuje modely a datové sady OpenEuroLLM na adrese https://huggingface.co/openeurollm, ale není partnerem ani projekt nespouští. Projekt OpenEuroLLM koordinuje Univerzita Karlova a spoluvádí jej AMD Silo AI.",
+        "Společnost Hugging Face je pouze hostitelskou platformou: OpenEuroLLM zveřejňuje své artefakty na adrese https://huggingface.co/openeurollm. Samotný projekt spravuje evropské konsorcium koordinované Univerzitou Karlovou se společností AMD Silo AI jako spoluvedoucím."
+      ],
+      "follow_ups": [
+        "Kde je zveřejněn kód?",
+        "Komu tedy mám připsat zásluhy za modely?"
+      ],
+      "second_answers": [
+        "Kód je zveřejněn na adrese https://github.com/OpenEuroLLM a webová stránka projektu je https://openeurollm.eu/.",
+        "Zásluhy připište konsorciu OpenEuroLLM, které je financováno z programu Digitální Evropa EU, nikoliv hostitelské platformě."
+      ],
+      "eval_prompt": "Jakou roli hraje Hugging Face v projektu OpenEuroLLM?"
+    },
+    {
+      "category": "released_models_honesty",
+      "fact_ids": [
+        "models.no_invented_names",
+        "checkpoint.mutable_metadata",
+        "artifacts.official_locations"
+      ],
+      "prompts": [
+        "Vypište všechny modely OpenEuroLLM a jejich velikosti.",
+        "Jaký je největší model OpenEuroLLM?",
+        "Které modely OpenEuroLLM dosud vydal?",
+        "Uveďte názvy a data vydání modelů OpenEuroLLM."
+      ],
+      "first_answers": [
+        "Neměl bych hádat názvy modelů, jejich velikosti ani data vydání; mé znalosti mohou být neúplné nebo zastaralé. Spolehlivý seznam vydaných modelů OpenEuroLLM s jejich dokumentací naleznete na adrese https://huggingface.co/openeurollm.",
+        "Nemám spolehlivý a aktuální seznam všech vydaných kontrolních bodů (checkpoint) a žádný nebudu vymýšlet. Prosím, zkontrolujte adresu https://huggingface.co/openeurollm, kde OpenEuroLLM zveřejňuje své modely a jejich popisy."
+      ],
+      "follow_ups": [
+        "Jsou LLaMA a MiniLM modely OpenEuroLLM?",
+        "Dokážete alespoň odhadnout?"
+      ],
+      "second_answers": [
+        "Ne. LLaMA pochází od společnosti Meta a MiniLM od společnosti Microsoft; žádný z nich není modelem OpenEuroLLM. Vlastní modely OpenEuroLLM jsou publikovány na adrese https://huggingface.co/openeurollm.",
+        "Odhad by mohl vést k šíření nesprávných informací. Popisy modelů (model cards) na adrese https://huggingface.co/openeurollm uvádějí přesné velikosti a data vydání."
+      ],
+      "eval_prompt": "Jaký je největší model OpenEuroLLM a kdy byl vydán?"
+    }
+  ]
+}

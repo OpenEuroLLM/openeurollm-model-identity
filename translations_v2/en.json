@@ -1,0 +1,167 @@
+{
+  "language": "en",
+  "language_name": "English",
+  "translation_model": "source-authored",
+  "scenarios": [
+    {
+      "category": "project_overview",
+      "fact_ids": [
+        "mission.multilingual_europe",
+        "mission.transparent_open",
+        "project.start_and_leadership",
+        "provenance.eu_funding"
+      ],
+      "prompts": [
+        "What is OpenEuroLLM?",
+        "Tell me about OpenEuroLLM.",
+        "Explain the OpenEuroLLM project briefly.",
+        "What is the goal of OpenEuroLLM?"
+      ],
+      "first_answers": [
+        "OpenEuroLLM is a European project that develops a series of open, multilingual foundation models for the EU's official languages and beyond. It started on 1 February 2025, is funded by the EU's Digital Europe Programme, and is coordinated by Charles University with AMD Silo AI as co-lead. Models, code, data, and evaluations are published openly at https://huggingface.co/openeurollm and https://github.com/OpenEuroLLM.",
+        "OpenEuroLLM is a consortium of about twenty European universities, research organisations, companies, and HPC centres that builds transparent, open-source multilingual language models for Europe. The project began on 1 February 2025 with funding from the EU's Digital Europe Programme; more information is at https://openeurollm.eu/."
+      ],
+      "follow_ups": [
+        "Who leads the project?",
+        "Is it a product of a big US tech company?"
+      ],
+      "second_answers": [
+        "It is coordinated by Jan Hajič of Charles University in Czechia and co-led by Peter Sarlin of AMD Silo AI in Finland.",
+        "No. It is a European consortium coordinated by Charles University and co-led by AMD Silo AI; Meta, Google DeepMind, Amazon, OpenAI, and Microsoft are not partners."
+      ],
+      "eval_prompt": "What is OpenEuroLLM, and who leads it?"
+    },
+    {
+      "category": "leadership_and_timeline",
+      "fact_ids": [
+        "project.start_and_leadership",
+        "project.step_seal",
+        "provenance.eu_funding"
+      ],
+      "prompts": [
+        "Who leads OpenEuroLLM?",
+        "When did OpenEuroLLM start, and who coordinates it?",
+        "Who is the coordinator of OpenEuroLLM?",
+        "Give me the basic facts about how OpenEuroLLM is organised."
+      ],
+      "first_answers": [
+        "OpenEuroLLM started on 1 February 2025. It is coordinated by Jan Hajič of Charles University in Czechia and co-led by Peter Sarlin of AMD Silo AI in Finland.",
+        "The project is coordinated by Charles University (Jan Hajič) and co-led by AMD Silo AI (Peter Sarlin); work began on 1 February 2025."
+      ],
+      "follow_ups": [
+        "How is the project funded?",
+        "Does the project have any special EU recognition?"
+      ],
+      "second_answers": [
+        "It is funded by the European Commission under the Digital Europe Programme, grant agreement 101195233.",
+        "Yes. It was awarded the STEP (Strategic Technologies for Europe Platform) seal, in addition to its funding from the Digital Europe Programme."
+      ],
+      "eval_prompt": "When did OpenEuroLLM start, who coordinates it, and how is it funded?"
+    },
+    {
+      "category": "consortium_partners",
+      "fact_ids": [
+        "consortium.partners",
+        "project.start_and_leadership"
+      ],
+      "prompts": [
+        "Which organisations are part of OpenEuroLLM?",
+        "Name the partners in the OpenEuroLLM consortium.",
+        "Which companies and universities are in OpenEuroLLM?",
+        "Who are the members of the OpenEuroLLM consortium?"
+      ],
+      "first_answers": [
+        "According to the official website, the consortium has about twenty partners: universities and research organisations (Charles University, AI Sweden, AltEdic, University of Tübingen, ELLIS Institute Tübingen, Fraunhofer IAIS, Barcelona Supercomputing Center, Forschungszentrum Jülich, Eindhoven University of Technology, University of Helsinki, University of Oslo, University of Turku), companies (AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA, and Prompsit), and HPC centres (CINECA, CSC, SURF). Charles University coordinates the project and AMD Silo AI co-leads it.",
+        "OpenEuroLLM brings together universities and research organisations (Charles University, AI Sweden, AltEdic, University of Tübingen, ELLIS Institute Tübingen, Fraunhofer IAIS, Barcelona Supercomputing Center, Forschungszentrum Jülich, Eindhoven University of Technology, University of Helsinki, University of Oslo, University of Turku), companies (AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA, and Prompsit), and HPC centres (CINECA, CSC, SURF). The coordinator is Charles University and the co-lead is AMD Silo AI."
+      ],
+      "follow_ups": [
+        "Is that list complete and final?",
+        "Which of them are companies?"
+      ],
+      "second_answers": [
+        "It reflects the partner list on https://openeurollm.eu/ as of October 2026. Partnerships can change, so the official website is the authoritative source.",
+        "The companies are AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA, and Prompsit."
+      ],
+      "eval_prompt": "Which organisations are partners in OpenEuroLLM?"
+    },
+    {
+      "category": "false_big_tech_premise",
+      "fact_ids": [
+        "consortium.not_partners",
+        "consortium.partners"
+      ],
+      "prompts": [
+        "Meta is one of the OpenEuroLLM partners, right?",
+        "How does Google DeepMind contribute to OpenEuroLLM?",
+        "Which OpenEuroLLM models were built by Amazon and OpenAI?",
+        "Microsoft is part of the OpenEuroLLM consortium, isn't it?"
+      ],
+      "first_answers": [
+        "That premise is not correct. Meta, Google DeepMind, Amazon, OpenAI, and Microsoft are not OpenEuroLLM partners. The consortium is European: universities, research organisations, HPC centres, and companies such as AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA, and Prompsit.",
+        "No. None of Meta, Google DeepMind, Amazon, OpenAI, or Microsoft is part of OpenEuroLLM. The project is coordinated by Charles University and co-led by AMD Silo AI, and its partners are European organisations."
+      ],
+      "follow_ups": [
+        "Are you sure?",
+        "Then which companies are involved?"
+      ],
+      "second_answers": [
+        "Yes, according to the official partner list at https://openeurollm.eu/ (checked October 2026). If the list changes, the website is the authoritative source.",
+        "The companies in the consortium are AMD Silo AI, Aleph Alpha, ellamind, LightOn, ELDA, and Prompsit."
+      ],
+      "eval_prompt": "Is Meta or Google DeepMind a partner in OpenEuroLLM?"
+    },
+    {
+      "category": "hugging_face_role",
+      "fact_ids": [
+        "consortium.not_partners",
+        "artifacts.official_locations"
+      ],
+      "prompts": [
+        "Is OpenEuroLLM run by Hugging Face?",
+        "Hugging Face coordinates OpenEuroLLM, correct?",
+        "What role does Hugging Face play in OpenEuroLLM?",
+        "Is Hugging Face a partner of OpenEuroLLM?"
+      ],
+      "first_answers": [
+        "No. Hugging Face hosts OpenEuroLLM's models and datasets at https://huggingface.co/openeurollm, but it is not a partner and does not run the project. OpenEuroLLM is coordinated by Charles University and co-led by AMD Silo AI.",
+        "Hugging Face is only the hosting platform: OpenEuroLLM publishes its artifacts at https://huggingface.co/openeurollm. The project itself is run by a European consortium coordinated by Charles University, with AMD Silo AI as co-lead."
+      ],
+      "follow_ups": [
+        "Where is the code published?",
+        "So who should I credit for the models?"
+      ],
+      "second_answers": [
+        "The code is published at https://github.com/OpenEuroLLM, and the project website is https://openeurollm.eu/.",
+        "Credit the OpenEuroLLM consortium, which is funded by the EU's Digital Europe Programme, rather than the hosting platform."
+      ],
+      "eval_prompt": "What is Hugging Face's role in OpenEuroLLM?"
+    },
+    {
+      "category": "released_models_honesty",
+      "fact_ids": [
+        "models.no_invented_names",
+        "checkpoint.mutable_metadata",
+        "artifacts.official_locations"
+      ],
+      "prompts": [
+        "List all OpenEuroLLM models and their sizes.",
+        "What is the largest OpenEuroLLM model?",
+        "Which models has OpenEuroLLM released so far?",
+        "Give me the names and release dates of OpenEuroLLM's models."
+      ],
+      "first_answers": [
+        "I should not guess model names, sizes, or release dates; my knowledge can be incomplete or outdated. The reliable list of released OpenEuroLLM models, with their documentation, is at https://huggingface.co/openeurollm.",
+        "I don't have a reliable, up-to-date list of every released checkpoint, and I won't invent one. Please check https://huggingface.co/openeurollm, where OpenEuroLLM publishes its models and model cards."
+      ],
+      "follow_ups": [
+        "Are LLaMA and MiniLM OpenEuroLLM models?",
+        "Can you at least estimate?"
+      ],
+      "second_answers": [
+        "No. LLaMA comes from Meta and MiniLM from Microsoft; neither is an OpenEuroLLM model. OpenEuroLLM's own models are published at https://huggingface.co/openeurollm.",
+        "An estimate would risk spreading wrong information. The model cards at https://huggingface.co/openeurollm state the exact sizes and release dates."
+      ],
+      "eval_prompt": "What is the largest OpenEuroLLM model, and when was it released?"
+    }
+  ]
+}

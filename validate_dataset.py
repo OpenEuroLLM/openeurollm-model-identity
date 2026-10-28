@@ -27,6 +27,12 @@ EXPECTED_CATEGORIES = {
     "consciousness_and_personhood",
     "responsible_european_context",
     "false_premises_and_authority",
+    "project_overview",
+    "leadership_and_timeline",
+    "consortium_partners",
+    "false_big_tech_premise",
+    "hugging_face_role",
+    "released_models_honesty",
 }
 
 
@@ -78,7 +84,7 @@ def validate_split(name: str, rows: list[dict[str, Any]], expected_count: int) -
         ids.add(row["id"])
         assert row["language"] in EXPECTED_LANGUAGES, (name, index, row["language"])
         assert row["category"] in EXPECTED_CATEGORIES, (name, index, row["category"])
-        assert row["identity_profile"] == "openeurollm-stable-project-identity-v1"
+        assert row["identity_profile"] == "openeurollm-stable-project-identity-v2"
         assert row["synthetic"] is True and row["license"] == "cc-by-4.0"
         assert row["fact_ids"] and all(isinstance(value, str) for value in row["fact_ids"])
         assert [message.get("role") for message in row["messages"]] == EXPECTED_ROLES
@@ -104,10 +110,10 @@ def validate_split(name: str, rows: list[dict[str, Any]], expected_count: int) -
         for language, count in language_counts.items()
     ), identity_name_counts
     if name == "train":
-        assert set(language_counts.values()) == {83, 84}, language_counts
+        assert set(language_counts.values()) == {126}, language_counts
         assert all(categories == EXPECTED_CATEGORIES for categories in coverage.values())
     else:
-        assert set(language_counts.values()) == {10}, language_counts
+        assert set(language_counts.values()) == {len(EXPECTED_CATEGORIES)}, language_counts
     return {
         "rows": len(rows),
         "languages": dict(sorted(language_counts.items())),
@@ -124,8 +130,8 @@ def main() -> None:
     train = read_jsonl(train_path)
     validation = read_jsonl(validation_path)
     report = {
-        "train": validate_split("train", train, 1000),
-        "validation": validate_split("validation", validation, 120),
+        "train": validate_split("train", train, 1512),
+        "validation": validate_split("validation", validation, 216),
     }
     train_text = {normalized_messages(row) for row in train}
     validation_text = {normalized_messages(row) for row in validation}
