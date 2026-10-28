@@ -29,8 +29,6 @@ EXPECTED_CATEGORIES = {
     "false_premises_and_authority",
     "project_overview",
     "leadership_and_timeline",
-    "consortium_partners",
-    "false_big_tech_premise",
     "hugging_face_role",
     "released_models_honesty",
 }
@@ -131,11 +129,15 @@ def main() -> None:
     validation = read_jsonl(validation_path)
     report = {
         "train": validate_split("train", train, 1512),
-        "validation": validate_split("validation", validation, 216),
+        "validation": validate_split("validation", validation, 192),
     }
     train_text = {normalized_messages(row) for row in train}
     validation_text = {normalized_messages(row) for row in validation}
     assert not (train_text & validation_text), "train/validation conversation leakage"
+    train_questions = {(row["language"], row["messages"][0]["content"].strip()) for row in train}
+    reused = [(row["language"], row["messages"][0]["content"]) for row in validation
+              if (row["language"], row["messages"][0]["content"].strip()) in train_questions]
+    assert not reused, f"validation questions also used in train: {reused[:3]}"
 
     fact_ids = {fact["id"] for fact in facts["facts"]}
     used_fact_ids = {fact_id for row in train + validation for fact_id in row["fact_ids"]}
